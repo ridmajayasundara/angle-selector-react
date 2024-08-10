@@ -1,38 +1,104 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #0a192f;
+}
+
 .App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #64ffda;
+}
+
+.container {
+  background-color: #112240;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(100, 255, 218, 0.2);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h2 {
+  color: #64ffda;
+  margin-top: 0;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.angle-display {
+  font-size: 4rem;
+  margin: 1rem 0;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(100, 255, 218, 0.5);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+input[type="number"] {
+  width: 100px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  background-color: #0a192f;
+  border: 2px solid #64ffda;
+  border-radius: 5px;
+  color: #64ffda;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background: #0a192f;
+  outline: none;
+  margin: 1rem 0;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #64ffda;
+  cursor: pointer;
+  box-shadow: 0 0 10px #64ffda;
+}
+
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #64ffda;
+  cursor: pointer;
+  box-shadow: 0 0 10px #64ffda;
+}
+
+.radio-buttons {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  margin-top: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.radio-buttons input[type="radio"] {
+  display: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.radio-buttons label {
+  padding: 0.5rem 1rem;
+  background-color: #0a192f;
+  border: 2px solid #64ffda;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.radio-buttons label:hover,
+.radio-buttons label.active {
+  background-color: #64ffda;
+  color: #0a192f;
+  box-shadow: 0 0 15px rgba(100, 255, 218, 0.5);
 }
